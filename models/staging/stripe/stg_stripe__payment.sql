@@ -1,10 +1,10 @@
 -- source input
 
 WITH source as
-{
+(
     SELECT *
     FROM {{ source('stripe', 'payment') }}
-},
+),
 -- final CTE
 renamed as (
     SELECT
